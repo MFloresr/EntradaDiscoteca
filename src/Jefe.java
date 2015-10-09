@@ -6,7 +6,7 @@ public class Jefe {
     private ArrayList orden= new ArrayList();
     private Scanner input= new Scanner(System.in);
     private Client modelo=new Client();
-
+    //pedimos por pantalla las ordenes del jefe y lo guardamos como modelo de un cliente
     public Client OrdenJefe(){
 
         System.out.println("Soy el Jefe ");

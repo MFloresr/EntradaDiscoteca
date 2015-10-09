@@ -4,13 +4,14 @@ import java.util.Scanner;
 
 public class Client {
 
-
+    //propiedades
     private String Nom;
     private String Sexe;
     private String Peus;
     private int Edad;
     private int Diners;
 
+    //constructores
     public Client(){
     }
     public Client(String Nom, String Sexe, String Peus, int Edad, int Diners){
@@ -20,6 +21,8 @@ public class Client {
         this.Edad = Edad;
         this.Diners = Diners;
     }
+
+    //getters and setter
     public String getNom() {
         return Nom;
     }
@@ -50,6 +53,8 @@ public class Client {
     public void setNom(String nom) {
         Nom = nom;
     }
+
+    //aqui sobreescribimos la funcion toString para que imprima nuestros datos
     @Override
     public String toString() {
         return "[Nombre : "+this.getNom()+"] [Sexo: "+this.getSexe()+"] [Peus: " +this.getPeus() + "] [Diners: "+this.getDiners()+"] [Edat: "+this.getEdad()+"]";
