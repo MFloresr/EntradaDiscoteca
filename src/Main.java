@@ -5,6 +5,9 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+
+        List<Client> NoEntran = new ArrayList<>();
+        List<Client> Entran = new ArrayList<>();
         List<Client> clientes = Arrays.asList(
                 //          nom     sexe    calçat  edad diners
                 new Client("Jose","Hombre","Bambes",30,150),
@@ -24,14 +27,22 @@ public class Main {
 
         for(int i=0;i<clientes.size();i++){
            if(porter.PuedeEntrar(clientes.get(i), modelo)==true){
-               System.out.println("Puede entrar");
+               Entran.add(new Client(clientes.get(i).getNom(),clientes.get(i).getSexe(),clientes.get(i).getPeus(),clientes.get(i).getEdad(),clientes.get(i).getDiners()));
            }else{
-               System.out.println("No puede entrar");
+               NoEntran.add(new Client(clientes.get(i).getNom(),clientes.get(i).getSexe(),clientes.get(i).getPeus(),clientes.get(i).getEdad(),clientes.get(i).getDiners()));
            }
         }
-
-        //porter.PuedeEntrar(clientes, modelo );
-        //porter.verclientes(clientes);
+        System.out.println("Entran :");
+        System.out.println(" ");
+        porter.verclientes(Entran);
+        System.out.println(" ");
+        System.out.println("No puede entrar : ");
+        System.out.println(" ");
+        porter.verclientes(NoEntran);
+        System.out.println(" ");
+        System.out.println("Modelo : ");
+        System.out.println(" ");
+        System.out.println(modelo);
 
     }
 }
